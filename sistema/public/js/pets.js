@@ -7,6 +7,7 @@
 //
 // O QUE VOCÊ DESENVOLVE (RF-18): o envio do formulário de cadastro
 // do pet, associando-o ao tutor selecionado.
+// Exemplo de apoio: exemplos/exemplo-fetch.js (item 4, POST).
 // ============================================================
 
 const formPet = document.getElementById('form-pet');

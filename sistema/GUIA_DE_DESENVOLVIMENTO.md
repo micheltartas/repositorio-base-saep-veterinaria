@@ -13,6 +13,20 @@ parte pendente do sistema.
 - Estrutura das telas (HTML) com os campos e botões necessários
 - Banco de dados já criado e populado (`saep_db.sql`)
 
+## Exemplos disponíveis (pasta `exemplos/`)
+
+Todos usam cenários diferentes do sistema de vocês (livros, escola...).
+Leiam, copiem o padrão e troquem os nomes pelos do sistema de vocês.
+
+| Preciso de... | Olhe este arquivo |
+|---|---|
+| Usar o `fetch` (listar, buscar, POST, PUT, DELETE) | `exemplo-fetch.js` |
+| Desenhar a tabela, botões Editar/Excluir, preencher formulário e `<select>`, formatar data | `exemplo-montar-tela.js` (+ `exemplo-montar-tela.html` com os ids) |
+| Um CRUD completo (rota + tela), com busca `ILIKE` e `PUT` | `exemplo-crud-completo/` |
+| JOIN com mais de duas tabelas | `exemplo-join-multiplas-tabelas.sql` |
+| Mostrar o nome do usuário logado | `exemplo-exibir-dados-sessao.js` |
+| Logout | `exemplo-logout.js` |
+
 ## Ordem recomendada de implementação
 
 A funcionalidade de **Tutor** é a mais completa (tem todos os
@@ -110,6 +124,10 @@ Agendamento ficam mais rápidos, porque seguem a mesma lógica.
    `data_agendamento`.
 2. No front, cada linha da tabela tem um campo de data e um botão
    "Salvar" - ao clicar, chame `atualizarDataAgendamento(id, novaData)`.
+3. Cuidado com o formato da data: ela chega do banco como
+   `"2026-09-20T03:00:00.000Z"` e o campo `<input type="date">` só
+   aceita `"2026-09-20"`. O item F de `exemplos/exemplo-montar-tela.js`
+   mostra como resolver.
 
 ## Pontos de atenção (não esqueça)
 

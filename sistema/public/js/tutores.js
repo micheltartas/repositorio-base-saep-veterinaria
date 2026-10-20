@@ -9,6 +9,12 @@
 // carregarX() e renderizarX() separadas). O que falta é o conteúdo
 // de cada função marcada com TODO.
 //
+// EXEMPLOS DE APOIO (pasta exemplos/):
+//   - exemplo-montar-tela.js : desenhar a tabela, botões Editar e
+//                              Excluir, levar os dados para o formulário
+//   - exemplo-fetch.js       : todos os tipos de fetch (GET, busca,
+//                              POST, PUT e DELETE)
+//
 // Requisitos envolvidos neste arquivo: RF-12, RF-13, RF-14, RF-15, RF-17
 // ============================================================
 

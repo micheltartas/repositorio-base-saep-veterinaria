@@ -11,6 +11,10 @@
 // (input type="date", já preenchido com a data atual do
 // agendamento) mais um botão "Salvar" - ao clicar, atualiza
 // aquele agendamento. Isso evita precisar de modal/popup.
+//
+// EXEMPLOS DE APOIO (pasta exemplos/):
+//   - exemplo-montar-tela.js : desenhar a tabela e formatar datas
+//   - exemplo-fetch.js       : GET, PUT e os demais tipos de fetch
 // ============================================================
 
 const corpoTabela = document.getElementById('corpo-tabela-agendamentos');
@@ -48,7 +52,10 @@ function renderizarAgendamentos(agendamentos) {
     // corpoTabela.innerHTML, com as colunas: data, nome do pet,
     // espécie, nome do tutor, telefone do tutor, observação, e uma
     // célula de ação contendo:
-    //   <input type="date" value="${agendamento.data_agendamento}" data-id="${agendamento.id}">
+    //   <input type="date" value="DATA NO FORMATO AAAA-MM-DD" data-id="${agendamento.id}">
+    // ATENÇÃO: a data chega do banco como "2026-09-20T03:00:00.000Z", e o
+    // <input type="date"> só aceita "2026-09-20". Veja o item F de
+    // exemplos/exemplo-montar-tela.js antes de preencher o value.
     //   <button data-id="${agendamento.id}">Salvar</button>
     //
     // Depois de montar o innerHTML, adicione os addEventListener
